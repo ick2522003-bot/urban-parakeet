@@ -93,7 +93,7 @@
           </div>
 
           <div class="spot-grid">
-            <article class="card spot-card">
+            <article id="spot-zoo" class="card spot-card">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ichikawa_Zoo_Main_Gate_20170204.jpg"
                 alt="市川市動物公園の正門"
@@ -105,7 +105,7 @@
               </div>
             </article>
 
-            <article class="card spot-card">
+            <article id="spot-museum" class="card spot-card">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Ichikawa_City_History_Museum.jpg"
                 alt="市川市歴史博物館"
@@ -117,7 +117,7 @@
               </div>
             </article>
 
-            <article class="card spot-card">
+            <article id="spot-ilink" class="card spot-card">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Ichikawa_I-link_Obervation_Deck.jpg"
                 alt="市川アイリンク展望デッキ"
@@ -193,43 +193,49 @@
           <div class="map-review-grid">
             <div class="map-panel card">
               <div class="map-cards">
-                <article class="map-info-card">
+                <a class="map-info-card" href="#top">
                   <span class="map-dot dot-one"></span>
                   <div>
                     <strong>市川市</strong>
                     <p>自然と文化が調和する都市景観。</p>
                   </div>
-                </article>
-                <article class="map-info-card">
+                </a>
+                <a class="map-info-card" href="#spot-zoo">
                   <span class="map-dot dot-two"></span>
                   <div>
                     <strong>市川市動物公園</strong>
                     <p>観光の定番。家族連れに人気。</p>
                   </div>
-                </article>
-                <article class="map-info-card">
+                </a>
+                <a class="map-info-card" href="#spot-museum">
                   <span class="map-dot dot-three"></span>
                   <div>
                     <strong>市川市歴史博物館</strong>
                     <p>地域の歴史と文化を体感できる館。</p>
                   </div>
-                </article>
-                <article class="map-info-card">
+                </a>
+                <a class="map-info-card" href="#spot-ilink">
                   <span class="map-dot dot-four"></span>
                   <div>
                     <strong>市川アイリンク展望デッキ</strong>
                     <p>街の景色を一望できる絶景スポット。</p>
                   </div>
-                </article>
+                </a>
               </div>
-              <iframe
-                class="map-embed"
-                title="市川市の観光スポット地図"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=139.8500%2C35.6500%2C140.0500%2C35.8500&layer=mapnik&marker=35.728%2C139.93&marker=35.708%2C139.96&marker=35.742%2C139.90&marker=35.751%2C139.84"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen>
-              </iframe>
+              <div class="map-viewport">
+                <iframe
+                  class="map-embed"
+                  title="市川市の観光スポット地図"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=139.8500%2C35.6500%2C140.0500%2C35.8500&layer=mapnik&marker=35.728%2C139.93&marker=35.708%2C139.96&marker=35.742%2C139.90&marker=35.751%2C139.84"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen>
+                </iframe>
+                <span class="map-marker marker-one" aria-label="市川市マーカー">●</span>
+                <span class="map-marker marker-two" aria-label="市川市動物公園マーカー">●</span>
+                <span class="map-marker marker-three" aria-label="市川市歴史博物館マーカー">●</span>
+                <span class="map-marker marker-four" aria-label="市川アイリンク展望デッキマーカー">●</span>
+              </div>
               <div class="map-legend">
                 <span>市川市</span>
                 <span>市川市動物公園</span>
