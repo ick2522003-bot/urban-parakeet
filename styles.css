@@ -294,14 +294,7 @@ h3 {
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(15, 111, 191, 0.08);
-  text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.map-info-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 22px rgba(15, 111, 191, 0.12);
 }
 
 .map-info-card strong {
@@ -343,21 +336,6 @@ h3 {
   display: block;
   border-radius: 0;
 }
-
-.map-marker {
-  position: absolute;
-  font-size: 0.9rem;
-  line-height: 1;
-  color: #d62828;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.marker-one { top: 44%; left: 50%; }
-.marker-two { top: 36%; left: 62%; }
-.marker-three { top: 50%; left: 72%; }
-.marker-four { top: 58%; left: 40%; }
 
 .map-legend {
   display: flex;
