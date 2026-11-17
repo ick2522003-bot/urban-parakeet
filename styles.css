@@ -250,13 +250,62 @@ h3 {
 .features-grid,
 .spot-grid,
 .lifestyle-grid,
-.access-grid {
+.access-grid,
+.trip-grid {
   display: grid;
   gap: 28px;
 }
 
 .features-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trip-showcase {
+  background: linear-gradient(180deg, rgba(234, 245, 255, 0.7), rgba(255, 255, 255, 0));
+}
+
+.trip-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #143d67, #1b6ea5 45%, #4bb2d8);
+  border-radius: 28px;
+  color: white;
+  box-shadow: 0 28px 45px rgba(9, 52, 89, 0.22);
+  margin-bottom: 28px;
+}
+
+.trip-banner h2 {
+  margin: 0;
+}
+
+.trip-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trip-card {
+  padding: 24px 22px;
+  background: linear-gradient(180deg, #ffffff, #f4fbff);
+}
+
+.trip-card-emphasis {
+  background: linear-gradient(135deg, #fffaf0, #f5fbff);
+  border-color: rgba(246, 199, 110, 0.45);
+}
+
+.trip-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 111, 191, 0.08);
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .card {
@@ -436,8 +485,14 @@ h3 {
   .features-grid,
   .spot-grid,
   .lifestyle-grid,
-  .access-grid {
+  .access-grid,
+  .trip-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .trip-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .main-nav {
@@ -462,8 +517,13 @@ h3 {
   .features-grid,
   .spot-grid,
   .lifestyle-grid,
-  .access-grid {
+  .access-grid,
+  .trip-grid {
     grid-template-columns: 1fr;
+  }
+
+  .trip-banner {
+    padding: 24px 20px;
   }
 
   .hero {
