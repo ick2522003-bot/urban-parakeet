@@ -251,7 +251,9 @@ h3 {
 .spot-grid,
 .lifestyle-grid,
 .access-grid,
-.trip-grid {
+.trip-grid,
+.map-review-grid,
+.food-grid {
   display: grid;
   gap: 28px;
 }
@@ -260,59 +262,118 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.trip-showcase {
-  background: linear-gradient(180deg, rgba(234, 245, 255, 0.7), rgba(255, 255, 255, 0));
-}
-
-.trip-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 28px 32px;
-  background: linear-gradient(135deg, #143d67, #1b6ea5 45%, #4bb2d8);
-  border-radius: 28px;
-  color: white;
-  box-shadow: 0 28px 45px rgba(9, 52, 89, 0.22);
-  margin-bottom: 28px;
-}
-
-.trip-banner h2 {
-  margin: 0;
-}
-
-.trip-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.trip-card {
-  padding: 24px 22px;
-  background: linear-gradient(180deg, #ffffff, #f4fbff);
-}
-
-.trip-card-emphasis {
-  background: linear-gradient(135deg, #fffaf0, #f5fbff);
-  border-color: rgba(246, 199, 110, 0.45);
-}
-
-.trip-kicker {
-  display: inline-block;
-  margin-bottom: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(15, 111, 191, 0.08);
-  color: var(--primary-dark);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 22px;
   box-shadow: var(--shadow);
+}
+
+.map-review-grid {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.mini-map {
+  position: relative;
+  height: 310px;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(21, 95, 148, 0.25), rgba(80, 163, 193, 0.18)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    linear-gradient(180deg, #d8edf9 0%, #effaff 100%);
+  background-size: auto, 32px 32px, 32px 32px, auto;
+  overflow: hidden;
+}
+
+.mini-map::before {
+  content: "";
+  position: absolute;
+  inset: 18% 15% 22% 18%;
+  border: 2px dashed rgba(15, 111, 191, 0.38);
+  border-radius: 50%;
+}
+
+.pin {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 8px 18px rgba(15, 111, 191, 0.18);
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pin-one { top: 42%; left: 42%; }
+.pin-two { top: 30%; right: 20%; }
+.pin-three { bottom: 18%; left: 20%; }
+
+.review-panel {
+  padding: 28px 26px;
+}
+
+.review-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.review-list li {
+  padding: 16px 18px;
+  background: #f7fbff;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 111, 191, 0.1);
+}
+
+.review-list strong {
+  color: #f5a623;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.review-list p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.food-section {
+  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(234,245,255,0.85));
+}
+
+.food-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.food-card {
+  overflow: hidden;
+}
+
+.food-thumb {
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+}
+
+.food-thumb-one {
+  background-image: url('https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=900&q=80');
+}
+
+.food-thumb-two {
+  background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80');
+}
+
+.food-thumb-three {
+  background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80');
+}
+
+.food-body {
+  padding: 20px 18px 24px;
 }
 
 .feature-card {
@@ -486,13 +547,10 @@ h3 {
   .spot-grid,
   .lifestyle-grid,
   .access-grid,
-  .trip-grid {
+  .trip-grid,
+  .map-review-grid,
+  .food-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .trip-banner {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .main-nav {
@@ -518,12 +576,10 @@ h3 {
   .spot-grid,
   .lifestyle-grid,
   .access-grid,
-  .trip-grid {
+  .trip-grid,
+  .map-review-grid,
+  .food-grid {
     grid-template-columns: 1fr;
-  }
-
-  .trip-banner {
-    padding: 24px 20px;
   }
 
   .hero {
